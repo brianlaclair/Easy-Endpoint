@@ -19,7 +19,7 @@ switch ($type) {
 }
 
 // write the data array to a text file named with the current readable time
-$file = fopen('logs/' . date('Y-m-d-H.i.s') . '.txt', 'w');
+$file = fopen('logs/'. $type . date('Y-m-d-H.i.s') . '.txt', 'w');
 fwrite($file, print_r($data, true));
 fclose($file);
 
